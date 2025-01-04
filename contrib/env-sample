@@ -1,0 +1,11 @@
+SECRET_KEY=mykey
+DEBUG=True
+
+DATABASE_URL=postgres://sqsuser:sqspass@localhost:5432/sqsdb
+POSTGRES_PASSWORD=sqspass
+POSTGRES_USER=sqsuser
+POSTGRES_DB=sqsdb
+
+CELERY_BROKER_URL=pyamqp://rbuser:rbpass@localhost:5672/
+RABBITMQ_DEFAULT_USER=rbuser
+RABBITMQ_DEFAULT_PASS=rbpass
