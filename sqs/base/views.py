@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 from sqs.base import tasks
+import json
 
 
+@csrf_exempt
 def register(request):
 
-    tasks.somar.delay()
+    data = json.loads(request.body.decode())
 
-    return HttpResponse("Task executada")
+    tasks.register.delay(data)
+
+    return JsonResponse(data)
