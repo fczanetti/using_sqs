@@ -9,10 +9,3 @@ services:
     ports:
       - 5432:5432
     
-  rbmq:
-    container_name: rbmq_contanier
-    image: rabbitmq:4.0
-    restart: no
-    env_file: .env
-    ports: 
-      - 5672:5672
