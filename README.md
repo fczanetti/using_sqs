@@ -19,7 +19,7 @@ It'll be necessary to have an AWS account for you to create an SQS Queue and a I
 When creating this user, insert on it a policy called "AmazonSQSFullAccess". For this user, you also need to create an AWS access key. The access key and the secret access key will be used to set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables.
 
 ## Create an SQS Queue
-Just create a simple SQS Queue on AWS. It's not necessary to set any policy allowing access on it. Of course it may be a good idea, but for this simple project we can leave it empty;
+Just create a simple SQS Queue on AWS called "using-sqs". It's not necessary to set any policy allowing access on it. Of course it may be a good idea, but for this simple project we can leave it empty;
 
 ## Start database
 This command has to be run from the root of the project, where `docker-compose.yml` is located.
